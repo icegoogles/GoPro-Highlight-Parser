@@ -6,9 +6,9 @@ Highlights selected in GoPro-Quick are not stored inside the MP4-file.
 
 
 # How to use
-0. Install Python 3.X on your system
+0. Install Python 3.X on your system (for example via the micosoft store) (python version 3.8 or higher recommended)
 1. Download the repository (or just the "GP Highlight Extractor" python-file)
-2. Drag and drop the videofile(s) onto the "GP Highlight Extractor" python-file
+2. Drag and drop the videofile(s) onto the "GP Highlight Ext0ractor" python-file
 
 ![drag and drop](/images/drag_and_drop_onto_file.jpg)
 
