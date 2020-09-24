@@ -8,7 +8,6 @@ This project is to extract the highlights of GoPro-videos.
 2. Drag and drop the videofile(s) onto the "GP Highlight Extractor" python-file
 ![drag and drop](/images/drag_and_drop_onto_file.jpg)
 
-
 3. A txt-file will be created in the directory of the Video-file(s)
 ![created txt-file](/images/created_txt.jpg)
 ![Formatting of the txt](/images/inside_txt.jpg)
