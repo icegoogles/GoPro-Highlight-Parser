@@ -1,6 +1,9 @@
 # GoPro-Highlight-Parser
 This project is to extract the highlights of GoPro-videos.
 
+It only works for the highlights that were manually selected on the GoPro or a smartphone that is connected to the GoPro via the GoPro App.
+Highlights selected in GoPro-Quick are not stored inside the MP4-file.
+
 
 # How to use
 0. Install Python 3.X on your system
@@ -12,10 +15,14 @@ This project is to extract the highlights of GoPro-videos.
 3. A txt-file will be created in the directory of the Video-file(s)
 
 ![created txt-file](/images/created_txt.jpg)
+
+4. Inside the txt-file all Highlights are stored in the following format
+
 ![Formatting of the txt](/images/inside_txt.jpg)
 
 # Info
 Tested and developed on Windows 10 on Python 3.8
+The footage for testing was from the GoPro HERO6, but it should work for other models as well.
 
 The code for extracting the mp4 boxes/atoms is from 'Human Analog' (https://www.kaggle.com/humananalog):
 https://www.kaggle.com/humananalog/examine-mp4-files-with-python-only
