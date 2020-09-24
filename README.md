@@ -6,6 +6,9 @@ This project is to extract the highlights of GoPro-videos.
 0. Install Python 3.X on your system
 1. Download the repository (or just the "GP Highlight Extractor" python-file)
 2. Drag and drop the videofile(s) onto the "GP Highlight Extractor" python-file
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+
 3. A txt-file will be created in the directory of the Video-file(s)
 
 # Info
