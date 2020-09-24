@@ -96,17 +96,16 @@ def parse_highlights(f, start_offset=0, end_offset=float("inf")):
 
         if data == b'MANL' and inHighlights == True and inHLMT == True:
 
-            currPos = f.tell()
+            currPos = f.tell()  # remember current pointer/position
+            f.seek(currPos - 20)  # go back to highlight timestamp
 
-            f.seek(currPos - 20)
-
-            data = f.read(4)
-            timestamp = int.from_bytes(data, "big")
+            data = f.read(4)  # readout highlight
+            timestamp = int.from_bytes(data, "big")  #convert to integer
 
             if timestamp != 0:
-                listOfHighlights.append(timestamp)
+                listOfHighlights.append(timestamp)  # append to highlightlist
 
-            f.seek(currPos)
+            f.seek(currPos)  # go forward again (to the saved position)
 
 
     return np.array(listOfHighlights)/1000  # convert to seconds and return
