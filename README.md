@@ -21,7 +21,7 @@ Highlights selected in GoPro-Quick are not stored inside the MP4-file.
 ![Formatting of the txt](/images/inside_txt.jpg)
 
 # Info
-Tested and developed on Windows 10 on Python 3.8
+Tested and developed on Windows 10 on Python 3.8.
 The footage for testing was from the GoPro HERO6, but it should work for other models as well.
 
 The code for extracting the mp4 boxes/atoms is from 'Human Analog' (https://www.kaggle.com/humananalog):
