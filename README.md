@@ -26,6 +26,13 @@ Highlights selected in GoPro-Quick are not stored inside the MP4-file.
 
 ![Formatting of the txt](/images/inside_txt.jpg)
 
+# Tip
+Premiere Pro uses the Media-Timecode of the GoPro footage and therefore does not start at 00:00. To fix this Issue, go to: 
+
+EDIT > PREFERENCES > MEDIA
+
+and set 'Timecode' to "Start at 00:00:00:00"!
+
 # Info
 Tested and developed on Windows 10 on Python 3.8.
 The footage for testing was from the GoPro HERO6, but it should work for other models as well.
