@@ -6,12 +6,13 @@ Highlights selected in GoPro-Quick are not stored inside the MP4-file.
 
 
 # How to use
+## Easy method for windows
 1. For Windows just download the GP_Highlight_Extractor.exe and Drag and drop the videofile(s) onto the exe
-[
-Method with Python:
+
+## Method with Python:
 1. Install Python 3.X on your system (for example via the micosoft store) (python version 3.8 or higher recommended)
 2. Download the repository (or just the "GP Highlight Extractor" python-file)
-]
+
 
 2. Drag and drop the videofile(s) onto the "GP Highlight Extractor.py"/"GP_Highlight_Extractor.exe" file
 
