@@ -54,8 +54,13 @@ def examine_mp4(filename):
        
         udta_boxes = find_boxes(f, moov_boxes[b"udta"][0] + 8, moov_boxes[b"udta"][1])
 
-        ### get GPMF Box
-        highlights = parse_highlights(f, udta_boxes[b'GPMF'][0] + 8, udta_boxes[b'GPMF'][1])
+        if b'GPMF' in udta_boxes.keys():
+            ### get GPMF Box
+            highlights = parse_highlights(f, udta_boxes[b'GPMF'][0] + 8, udta_boxes[b'GPMF'][1])
+        else:
+            # parsing for versions before Hero6
+            highlights = parse_highlights_old_version(f, udta_boxes[b'HMMT'][0] + 12, udta_boxes[b'HMMT'][1])
+        
 
         print("")
         print("Filename:", filename)
@@ -63,6 +68,24 @@ def examine_mp4(filename):
         print('Here are all Highlights: ', highlights)
 
         return highlights
+
+def parse_highlights_old_version(f, start_offset=0, end_offset=float("inf")):
+    listOfHighlights = []
+
+    offset = start_offset
+    f.seek(offset, 0)
+
+    while True:
+        data = f.read(4)
+
+        timestamp = int.from_bytes(data, "big")
+
+        if timestamp != 0:
+            listOfHighlights.append(timestamp)
+        else:
+            break
+
+    return np.array(listOfHighlights)/1000  # convert to seconds and return
 
 def parse_highlights(f, start_offset=0, end_offset=float("inf")):
 
@@ -129,7 +152,6 @@ if __name__ == '__main__':
     # //////////////
     filename = None  # You can enter a custom filename here istead of 'None'. Otherwise just drag and drop a file on this script
     # //////////////
-
 
 
     if filename is None:
