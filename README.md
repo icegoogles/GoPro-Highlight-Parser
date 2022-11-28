@@ -2,7 +2,7 @@
 This project is to extract the highlights of GoPro-videos.
 
 It only works for the highlights that were manually selected on the GoPro or a smartphone that is connected to the GoPro via the GoPro App.
-Highlights selected in GoPro-Quick are not stored inside the MP4-file. This only works for the Hero6 and newer Models, since beforehand a differnent Highlight tagging structure was used.
+Highlights selected in GoPro-Quick are not stored inside the MP4-file.
 
 
 # How to use
